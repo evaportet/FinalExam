@@ -1,0 +1,52 @@
+POSICIONES INICIALES DE TODOS LOS OBJETOS
+--LEVEL1--
+sprite(88,130,'hero')
+sprite(137,38,'lever')
+sprite(88,24,'prison_fence')
+
+--LEVEL2--
+sprite(88,152,'prison_fence')
+sprite(120,40,'spike_trap')
+sprite(120,56,'spike_trap')
+sprite(136,56,'spike_trap')
+sprite(56,54,'torch')
+sprite(88,130,'hero')
+
+--LEVEL3--
+slime_prefab(this,88,64,'slime')
+sprite(120,40,'hero');
+sprite(88,24,'door')
+sprite(120,120,'chest')
+sprite(48,37,'armory')
+
+--LEVEL4--
+this.add.sprite(56,54,'torch')
+this.add.sprite(120,54,'torch')
+this.add.sprite(56,118,'torch')
+this.add.sprite(120,118,'torch')
+sprite(88,88,'chest')
+sprite(88,152,'door')
+sprite(88,130,'hero');
+
+--MENU--
+bitmapText(88, 130,'Play')
+bitmapText(88, 30,"Dungeon Exam")
+sprite(72,88,'hero')
+sprite(104,88,'slime')
+
+BODY DEL HERO
+this.hero.body.setSize(12,10,true).setOffset(18,22);
+
+FUNCIONES 'INTERESANTES'
+this.cameras.main.fadeOut
+this.cameras.main.once
+this.add.tween
+this.add.bitmapText
+array.includes
+array.push
+sprite.setFrame
+this.add.zone
+this.map.setCollisionByExclusion
+this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE).on('up',function(){},this)
+sprite.anims.play(key,true).on('animationcomplete',function (){}, this);
+zone.body.debugBodyColor = 0xffffff;

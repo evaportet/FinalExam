@@ -1,0 +1,45 @@
+var gamePrefs=
+{
+    gameWidth:960,
+    gameHeight:540,
+    level1Width:400, //25*16
+    level1Height:400, //25*16
+    STUDENT_SPEED:100,
+    STUDENT_GRAVITY:0
+}
+
+var config = 
+{
+    type: Phaser.AUTO,
+    width: gamePrefs.gameWidth,
+    height: gamePrefs.gameHeight,
+    scene:[examen_av], //array con las escenas
+    render:
+    {
+        pixelArt:true
+    },
+    scale:
+    {
+        mode:Phaser.Scale.FIT,
+        width:gamePrefs.gameWidth/4,
+        height:gamePrefs.gameHeight/4,
+        autoCenter:Phaser.Scale.CENTER_BOTH
+    }
+    ,
+    physics:
+    {
+        default:'arcade',
+        arcade:
+        {
+            gravity:{y:gamePrefs.STUDENT_GRAVITY},
+            debug:true
+        }
+    },
+    fps:
+    {
+        target:60,
+        forceSetTimeOut:true
+    }
+};
+
+var juego = new Phaser.Game(config);
